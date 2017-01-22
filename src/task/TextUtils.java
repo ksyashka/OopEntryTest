@@ -90,7 +90,7 @@ public class TextUtils {
         String temp;
         for (int i = len - 1; i > 0; i--)
             for (int j = 0; j < i; j++) {
-                if (getMinWord(uniqueWords[j], uniqueWords[j + 1]).equals(uniqueWords[j + 1])) {
+                if (uniqueWords[j].compareTo(uniqueWords[j+1])>0) {
                     temp = uniqueWords[j + 1];
                     uniqueWords[j + 1] = uniqueWords[j];
                     uniqueWords[j] = temp;
@@ -99,7 +99,7 @@ public class TextUtils {
         return uniqueWords;
     }
 
-    public static String getMinWord(String word1, String word2) {
+   /* public static String getMinWord(String word1, String word2) {
         int len1 = word1.length();
         int len2 = word2.length();
         int len = len1;
@@ -121,5 +121,5 @@ public class TextUtils {
             } else if (word1.charAt(i) == word2.charAt(i)) result = word1;
         return result;
     }
-
+*/
 }
