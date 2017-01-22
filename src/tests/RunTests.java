@@ -44,7 +44,7 @@ public class RunTests {
     @Test
     public void testGetUniqueSortedWords1(){
         String[] expected = {"abc", "bac", "cab"};
-        String[] actual = TextUtils.getUniqueSortedWords("cab; abc; cab; cab; bac; bac");
+        String[] actual = TextUtils.getUniqueSortedWords("cab; abc; cab; cab; bac; bac; ");
         Assert.assertArrayEquals(expected, actual);
     }
 
